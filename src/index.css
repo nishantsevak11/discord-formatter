@@ -1,0 +1,167 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 14% 20%;
+    --foreground: 0 0% 100%;
+
+    --card: 224 13% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 224 13% 20%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 240 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4% 46%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4% 26%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 75% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 240 75% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.editor-container {
+  min-height: 200px;
+  border-radius: 8px;
+  background-color: #222327;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.editor-container:focus-within {
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.3);
+}
+
+.editor-content {
+  min-height: 200px;
+  outline: none;
+  padding: 1rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.color-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.color-btn.active {
+  box-shadow: 0 0 0 2px white;
+}
+
+.toolbar-button {
+  transition: all 0.2s ease;
+}
+
+.toolbar-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toolbar-button.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Styling for formatted preview */
+.formatted-text b, 
+.formatted-text strong {
+  font-weight: bold;
+}
+
+.formatted-text i, 
+.formatted-text em {
+  font-style: italic;
+}
+
+.formatted-text u {
+  text-decoration: underline;
+}
+
+.formatted-text s, 
+.formatted-text strike {
+  text-decoration: line-through;
+}
+
+.formatted-text code {
+  background-color: #2f3136;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+.formatted-text blockquote {
+  border-left: 4px solid #4f545c;
+  padding-left: 8px;
+  margin: 4px 0;
+  color: #b9bbbe;
+}
+
+.formatted-text .code-block {
+  background-color: #2f3136;
+  font-family: monospace;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+
+.preview-content b {
+  font-weight: bold;
+}
+.preview-content i {
+  font-style: italic;
+}
+.preview-content u {
+  text-decoration: underline;
+}
+.preview-content s {
+  text-decoration: line-through;
+}
+.preview-content code {
+  background: #2f3136;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+.preview-content blockquote {
+  border-left: 3px solid #4f545c;
+  padding-left: 10px;
+  margin: 5px 0;
+  color: #dcddde;
+}
