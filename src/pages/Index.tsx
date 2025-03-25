@@ -7,9 +7,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col py-12 px-4 sm:px-6 lg:px-8">
       <TextEditor />
       
-      <footer className="mt-12 text-center text-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} TextSmith Formatter • All formatting takes place locally in your browser</p>
-      </footer>
+      
     </div>
   );
 };

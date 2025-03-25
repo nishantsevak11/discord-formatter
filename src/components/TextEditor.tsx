@@ -434,40 +434,7 @@ const TextEditor = () => {
         </div>
       </div>
       
-      <div className="rounded-lg bg-card p-4 shadow-lg animate-slide-up" style={{ animationDelay: "0.2s" }}>
-        <h2 className="text-lg font-medium mb-2">Discord Formatting Guide</h2>
-        <p className="text-sm text-muted-foreground mb-4">
-          Discord supports Markdown formatting. This formatter creates text that displays correctly when pasted into Discord.
-        </p>
-        
-        <h3 className="text-md font-medium mb-2">Formatting Syntax:</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
-          <div className="bg-muted p-2 rounded text-sm">
-            <code>**Bold**</code> → <span className="font-bold">Bold</span>
-          </div>
-          <div className="bg-muted p-2 rounded text-sm">
-            <code>*Italic*</code> → <span className="italic">Italic</span>
-          </div>
-          <div className="bg-muted p-2 rounded text-sm">
-            <code>__Underline__</code> → <span className="underline">Underline</span>
-          </div>
-          <div className="bg-muted p-2 rounded text-sm">
-            <code>~~Strikethrough~~</code> → <span className="line-through">Strikethrough</span>
-          </div>
-          <div className="bg-muted p-2 rounded text-sm">
-            <code>`Code`</code> → <span className="bg-[#2f3136] px-1 rounded">Code</span>
-          </div>
-          <div className="bg-muted p-2 rounded text-sm">
-            <code>{">"} Quote</code> → <span className="border-l-4 border-gray-500 pl-2">Quote</span>
-          </div>
-        </div>
-        
-        <div className="mt-4 p-3 bg-muted rounded-md">
-          <p className="text-sm font-medium">Color Example (ANSI):</p>
-          <code className="text-xs block mt-1">```ansi<br/>Normal \x1b[31mRed Text\x1b[0m \x1b[43mYellow Background\x1b[0m<br/>```</code>
-          <p className="text-xs mt-2 text-muted-foreground">Note: ANSI colors only work in code blocks and may not be visible on all Discord clients (works best on desktop).</p>
-        </div>
-      </div>
+      
     </div>
   );
 };
